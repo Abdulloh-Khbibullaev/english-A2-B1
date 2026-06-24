@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>English Roadmap: A2 to B1</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Разделы">
+        <a class="brand" href="#dashboard" data-view="dashboard" aria-label="English Roadmap dashboard">
+          <span class="brand-mark">ER</span>
+          <span>
+            <strong>English Roadmap</strong>
+            <small>A2 to B1</small>
+          </span>
+        </a>
+
+        <nav class="nav-list">
+          <button class="nav-item active" data-view="dashboard">Dashboard</button>
+          <button class="nav-item" data-view="vocabulary">Vocabulary</button>
+          <button class="nav-item" data-view="grammar">Grammar Academy</button>
+          <button class="nav-item" data-view="speaking">Speaking Trainer</button>
+          <button class="nav-item" data-view="practice">Practice Center</button>
+          <button class="nav-item" data-view="exam">B1 Simulator</button>
+        </nav>
+
+        <div class="streak-card">
+          <span class="mini-orbit"></span>
+          <p>Серия дней</p>
+          <strong>14 дней</strong>
+          <small>Следующая награда через 3 дня</small>
+        </div>
+      </aside>
+
+      <main class="workspace">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Текущий маршрут</p>
+            <h1>English Roadmap: A2 <span>to</span> B1</h1>
+          </div>
+          <div class="level-pill" aria-label="Текущий уровень A2, цель B1">
+            <span>A2</span>
+            <b></b>
+            <span>B1</span>
+          </div>
+        </header>
+
+        <section class="hero-grid view active" id="dashboard">
+          <div class="progress-panel">
+            <div class="panel-head">
+              <div>
+                <p class="eyebrow">Общий прогресс</p>
+                <h2>45% пути до B1</h2>
+              </div>
+              <div class="xp-cube" aria-hidden="true">
+                <span>XP</span>
+              </div>
+            </div>
+            <div class="progress-track">
+              <span style="width: 45%"></span>
+            </div>
+            <div class="metric-grid">
+              <article>
+                <strong>1250</strong>
+                <span>слов из 3000</span>
+              </article>
+              <article>
+                <strong>18</strong>
+                <span>тем из 50</span>
+              </article>
+              <article>
+                <strong>2140</strong>
+                <span>XP за месяц</span>
+              </article>
+            </div>
+            <div class="growth-chart" aria-label="График роста уровня">
+              <i style="height: 38%"></i>
+              <i style="height: 52%"></i>
+              <i style="height: 44%"></i>
+              <i style="height: 68%"></i>
+              <i style="height: 73%"></i>
+              <i style="height: 86%"></i>
+              <i style="height: 92%"></i>
+            </div>
+          </div>
+
+          <div class="daily-card">
+            <div class="panel-head">
+              <div>
+                <p class="eyebrow">Карточка дня</p>
+                <h2>Сегодняшние задания</h2>
+              </div>
+              <span class="badge">+180 XP</span>
+            </div>
+            <ul class="task-list">
+              <li class="done"><span></span>20 слов</li>
+              <li class="done"><span></span>1 грамматический урок</li>
+              <li class="done"><span></span>10 вопросов теста</li>
+              <li class="done"><span></span>5 минут аудирования</li>
+            </ul>
+            <button class="primary-action" data-view="vocabulary">Продолжить урок</button>
+          </div>
+
+          <div class="roadmap-band">
+            <div class="road-step complete">A2 Core</div>
+            <div class="road-step complete">Words 1k</div>
+            <div class="road-step current">Grammar 18/50</div>
+            <div class="road-step">Listening 100+</div>
+            <div class="road-step">B1 Exam</div>
+          </div>
+
+          <div class="module-grid">
+            <article class="module-card" data-view="vocabulary">
+              <span class="icon-stack words"></span>
+              <h3>Vocabulary</h3>
+              <p>Категории, примеры, озвучивание и мини-тесты на 5 вопросов.</p>
+            </article>
+            <article class="module-card" data-view="grammar">
+              <span class="icon-stack grammar"></span>
+              <h3>Grammar Academy</h3>
+              <p>50+ тем: объяснение, examples, exercises, quiz.</p>
+            </article>
+            <article class="module-card" data-view="speaking">
+              <span class="icon-stack speak"></span>
+              <h3>Speaking Trainer</h3>
+              <p>ИИ-диалоги с автоматическим исправлением ошибок.</p>
+            </article>
+            <article class="module-card" data-view="practice">
+              <span class="icon-stack listen"></span>
+              <h3>Practice Center</h3>
+              <p>Listening, Reading, Writing и еженедельные тесты.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="view two-column" id="vocabulary">
+          <div class="content-panel">
+            <p class="eyebrow">Vocabulary</p>
+            <h2>Слова по категориям</h2>
+            <div class="word-tabs" role="tablist" aria-label="Категории слов">
+              <button class="active" data-category="work">Работа</button>
+              <button data-category="travel">Путешествия</button>
+              <button data-category="food">Еда</button>
+              <button data-category="tech">Технологии</button>
+            </div>
+            <div class="word-cloud" id="wordCloud"></div>
+          </div>
+          <div class="content-panel word-card">
+            <p class="eyebrow">Example</p>
+            <h2 id="wordTitle">Interview</h2>
+            <dl>
+              <div><dt>Translation</dt><dd id="wordTranslation">Собеседование</dd></div>
+              <div><dt>Pronunciation</dt><dd id="wordPronunciation">/ˈɪntəvjuː/</dd></div>
+              <div><dt>Example</dt><dd id="wordExample">I have a job interview tomorrow.</dd></div>
+            </dl>
+            <div class="word-actions">
+              <button class="secondary-action" id="audioBtn">Прослушать</button>
+              <button class="primary-action" id="quizBtn">Мини-тест</button>
+            </div>
+            <div class="quiz-box" id="quizBox" hidden>
+              <strong>Question 1/5</strong>
+              <p>Choose the correct translation for “interview”.</p>
+              <button>Встреча</button>
+              <button class="correct">Собеседование</button>
+              <button>Зарплата</button>
+            </div>
+          </div>
+          <div class="content-panel spaced">
+            <p class="eyebrow">Spaced Repetition</p>
+            <h2>Повторение слов</h2>
+            <div class="repeat-row"><span>1 день</span><b></b></div>
+            <div class="repeat-row"><span>3 дня</span><b></b></div>
+            <div class="repeat-row"><span>7 дней</span><b></b></div>
+            <div class="repeat-row"><span>14 дней</span><b></b></div>
+            <div class="repeat-row"><span>30 дней</span><b></b></div>
+          </div>
+        </section>
+
+        <section class="view" id="grammar">
+          <div class="content-panel">
+            <div class="panel-head">
+              <div>
+                <p class="eyebrow">Grammar Academy</p>
+                <h2>Главная линия грамматики</h2>
+              </div>
+              <span class="badge">18/50 тем</span>
+            </div>
+            <div class="grammar-list">
+              <article class="grammar-item active">
+                <span>Module 1</span>
+                <h3>Present Simple</h3>
+                <p>Объяснение, examples, exercises, quiz.</p>
+                <div class="lesson-actions"><button>Explanation</button><button>Examples</button><button>Exercises</button><button>Quiz</button></div>
+              </article>
+              <article class="grammar-item"><span>Module 2</span><h3>Present Continuous</h3><p>Actions now and temporary situations.</p></article>
+              <article class="grammar-item"><span>Module 3</span><h3>Past Simple</h3><p>Finished actions in the past.</p></article>
+              <article class="grammar-item"><span>Module 4</span><h3>Past Continuous</h3><p>Background actions and interruptions.</p></article>
+              <article class="grammar-item"><span>Module 5</span><h3>Present Perfect</h3><p>Experience, result and unfinished time.</p></article>
+              <article class="grammar-item"><span>Module 6</span><h3>Future Forms</h3><p>Will, going to, present continuous.</p></article>
+              <article class="grammar-item"><span>Module 7</span><h3>Conditionals</h3><p>Zero, first and second conditional.</p></article>
+              <article class="grammar-item"><span>Module 8</span><h3>Passive Voice</h3><p>Focus on action and result.</p></article>
+              <article class="grammar-item"><span>Module 9</span><h3>Reported Speech</h3><p>Tell what someone said.</p></article>
+              <article class="grammar-item"><span>Module 10</span><h3>Relative Clauses</h3><p>Who, which, that, where.</p></article>
+            </div>
+          </div>
+        </section>
+
+        <section class="view two-column" id="speaking">
+          <div class="content-panel chat-panel">
+            <p class="eyebrow">Speaking Trainer</p>
+            <h2>ИИ-чат для разговорной практики</h2>
+            <div class="chat-stream">
+              <p class="bot">Hello! What did you do yesterday?</p>
+              <p class="user">I watched a movie.</p>
+              <p class="bot">Great! Which movie did you watch?</p>
+              <p class="coach">Correction: “I watched a movie” is correct. Try adding one detail.</p>
+            </div>
+            <div class="chat-input">
+              <input value="I watched a comedy with my friend." aria-label="Ответ ученика" />
+              <button>Send</button>
+            </div>
+          </div>
+          <div class="content-panel">
+            <p class="eyebrow">Цель</p>
+            <h2>30 разговорных практик</h2>
+            <div class="ring-progress"><span>12/30</span></div>
+            <p class="muted">Темы: yesterday, plans, work, travel, opinions, stories.</p>
+          </div>
+        </section>
+
+        <section class="view" id="practice">
+          <div class="practice-grid">
+            <article class="content-panel">
+              <p class="eyebrow">Listening Center</p>
+              <h2>Beginner to Intermediate</h2>
+              <ul class="clean-list">
+                <li>Короткие диалоги</li>
+                <li>Интервью</li>
+                <li>Новости</li>
+                <li>Подкасты</li>
+              </ul>
+              <div class="question-card">What was the topic?</div>
+              <div class="question-card">Who was speaking?</div>
+              <div class="question-card">Why was he worried?</div>
+            </article>
+            <article class="content-panel">
+              <p class="eyebrow">Reading Practice</p>
+              <h2>Статьи по уровням</h2>
+              <div class="level-row"><strong>A2</strong><span>100-150 слов</span></div>
+              <div class="level-row"><strong>B1</strong><span>300-500 слов</span></div>
+              <ul class="clean-list">
+                <li>Vocabulary</li>
+                <li>Questions</li>
+                <li>Summary Task</li>
+              </ul>
+            </article>
+            <article class="content-panel">
+              <p class="eyebrow">Writing Practice</p>
+              <h2>Письменные задания</h2>
+              <div class="writing-task">Write about your family <span>100 words</span></div>
+              <div class="writing-task">Describe your dream job <span>150 words</span></div>
+              <div class="writing-task">Write an email <span>200 words</span></div>
+              <p class="muted">Проверка: grammar, vocabulary, spelling, style.</p>
+            </article>
+            <article class="content-panel">
+              <p class="eyebrow">Weekly Tests</p>
+              <h2>Результаты недели</h2>
+              <div class="score-row"><span>Vocabulary</span><b>82%</b></div>
+              <div class="score-row"><span>Grammar</span><b>76%</b></div>
+              <div class="score-row"><span>Listening</span><b>70%</b></div>
+              <div class="score-row"><span>Reading</span><b>88%</b></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="view two-column" id="exam">
+          <div class="content-panel exam-panel">
+            <p class="eyebrow">B1 Exam Simulator</p>
+            <h2>Полная имитация экзамена</h2>
+            <div class="exam-sections">
+              <button>Reading</button>
+              <button>Listening</button>
+              <button>Writing</button>
+              <button>Grammar</button>
+            </div>
+            <button class="primary-action">Начать симулятор</button>
+          </div>
+          <div class="content-panel">
+            <p class="eyebrow">Что нужно для B1</p>
+            <h2>План на 4-8 месяцев</h2>
+            <div class="requirement"><strong>2500-3500</strong><span>слов</span></div>
+            <div class="requirement"><strong>50+</strong><span>тем грамматики</span></div>
+            <div class="requirement"><strong>100+</strong><span>аудирований</span></div>
+            <div class="requirement"><strong>200+</strong><span>тестов</span></div>
+            <div class="requirement"><strong>50</strong><span>письменных заданий</span></div>
+            <div class="requirement"><strong>30</strong><span>разговорных практик</span></div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
